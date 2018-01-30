@@ -12,7 +12,7 @@ export default class LoginScreen extends Component {
     return (
       <FullHeightGrid centered verticalAlign="middle">
         <Grid.Column style={{ width: '280px' }} textAlign='center'>
-          <Segment stacked padded="very">
+          <Segment style={{ paddingTop: '2em' }} stacked padded="very">
             <Divider horizontal inverted><Header size='huge'>로그인</Header></Divider>
             <Button color='google plus' fluid>
               <Icon name='google plus' /> Google Plus
