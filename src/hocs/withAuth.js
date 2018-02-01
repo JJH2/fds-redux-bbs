@@ -12,7 +12,7 @@ export default function withAtuh(WrappedComponent) {
     }
 
     componentWillMount() {
-      const currentUser = firebase.auth().currentUser;
+      const { currentUser } = firebase.auth();
       if (currentUser) {
         this.setState({
           currentUser,

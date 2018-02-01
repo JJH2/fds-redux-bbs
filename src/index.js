@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'semantic-ui-css/semantic.min.css';
+import * as firebase from 'firebase';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import 'semantic-ui-css/semantic.min.css';
-import * as firebase from 'firebase';
 
 const config = {
   apiKey: 'AIzaSyBXc3tUGlmsFA5ub_rLc_wF-sw6QGM_HYw',
