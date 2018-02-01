@@ -5,17 +5,17 @@ import TopMenu from '../components/TopMenu';
 
 const logoProps = {
   as: Link,
-  to: '/link'
-}
+  to: '/link',
+};
 const accountProps = {
   as: Link,
-  to: 'account'
-}
+  to: 'account',
+};
 
 export default class TopMenuContainer extends Component {
   render() {
     return (
       <TopMenu logoProps={logoProps} accountProps={accountProps} />
-    )
+    );
   }
 }

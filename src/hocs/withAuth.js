@@ -8,49 +8,48 @@ export default function withAtuh(WrappedComponent) {
     state = {
       currentUser: null,
       loading: false,
-      redirectToLogin: false
+      redirectToLogin: false,
     }
 
     componentWillMount() {
       const currentUser = firebase.auth().currentUser;
       if (currentUser) {
         this.setState({
-          currentUser
+          currentUser,
         });
       } else {
         this.setState({
-          loading: true
-        })
-        const unsubscribe = firebase.auth().onAuthStateChanged(user => {
+          loading: true,
+        });
+        const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
           unsubscribe();
           if (user) {
             this.setState({
               currentUser: user,
-              loading: false
+              loading: false,
             });
           } else {
             this.setState({
-              redirectToLogin: true
-            })
+              redirectToLogin: true,
+            });
           }
-        })
+        });
       }
     }
     render() {
       if (this.state.redirectToLogin) {
-        return <Redirect to="/login" />
+        return <Redirect to="/login" />;
       } else if (this.state.loading) {
         return (
           <Dimmer active={this.state.loading}>
             <Loader>Loading</Loader>
           </Dimmer>
-        )
-      } else {
-        return (
-          <WrappedComponent {...this.props} />
-        )
+        );
       }
+      return (
+        <WrappedComponent {...this.props} />
+      );
     }
-  }
+  };
 }
 

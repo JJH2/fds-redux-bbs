@@ -4,18 +4,18 @@ import { Menu } from 'semantic-ui-react';
 export default class TopMenu extends Component {
   static defaultProps = {
     logoProps: {},
-    accountProps: {}
+    accountProps: {},
   }
   render() {
-    const {logoProps, accountProps} = this.props;
+    const { logoProps, accountProps } = this.props;
     return (
       <Menu>
-        <Menu.Item {...logoProps} name='browse'>
+        <Menu.Item {...logoProps} name="browse">
           게시판
         </Menu.Item>
 
-        <Menu.Menu position='right'>
-          <Menu.Item {...accountProps} name='help'>
+        <Menu.Menu position="right">
+          <Menu.Item {...accountProps} name="help">
             계정
           </Menu.Item>
         </Menu.Menu>
