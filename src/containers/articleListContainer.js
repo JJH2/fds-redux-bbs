@@ -15,4 +15,4 @@ export default connect(
       dispatch(fetchArticleList());
     },
   }),
-)(ArticleList);
+)(withLoading(ArticleList));
