@@ -7,12 +7,12 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const config = {
-  apiKey: 'AIzaSyBXc3tUGlmsFA5ub_rLc_wF-sw6QGM_HYw',
-  authDomain: 'fds-cra-bbs-790f1.firebaseapp.com',
-  databaseURL: 'https://fds-cra-bbs-790f1.firebaseio.com',
-  projectId: 'fds-cra-bbs-790f1',
-  storageBucket: 'fds-cra-bbs-790f1.appspot.com',
-  messagingSenderId: '125390268893',
+  apiKey: 'AIzaSyCyA2eYBGHMTWxOiBIP23Izr66Szr2tCUM',
+  authDomain: 'todolist1-82ee0.firebaseapp.com',
+  databaseURL: 'https://todolist1-82ee0.firebaseio.com',
+  projectId: 'todolist1-82ee0',
+  storageBucket: 'todolist1-82ee0.appspot.com',
+  messagingSenderId: '711342994667',
 };
 firebase.initializeApp(config);
 
