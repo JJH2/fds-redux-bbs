@@ -7,7 +7,7 @@ export default connect(
   // mapStateToProps
   state => ({
     articles: state.articleList.articles,
-
+    loading: state.articleList.loading,
   }),
   // mapDispatchToProps
   dispatch => ({
