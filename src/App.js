@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 
 import LoginScreenContainer from './containers/LoginScreenContainer';
 import ListPage from './containers/ListPage';
+import NewArticlePage from './containers/NewArticlePage';
 import withAuth from './hocs/withAuth';
 import rootReducer from './ducts/index';
 
@@ -20,13 +21,14 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <HashRouter>
+        <BrowserRouter>
           <div>
             <Route path="/" exact component={Home} />
             <Route path="/login" component={LoginScreenContainer} />
             <Route path="/list" component={ListPage} />
+            <Route path="/new-article" component={NewArticlePage} />
           </div>
-        </HashRouter>
+        </BrowserRouter>
       </Provider>
     );
   }
