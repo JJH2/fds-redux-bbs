@@ -7,7 +7,6 @@ import ArticleListContainer from './ArticleListContainer';
 const ListPage = () => (
   <div>
     <TopMenuContainer />
-    {process.env.REACT_APP_API_KEY}
     <Link to="/new-article">새 게시물</Link>
     <ArticleListContainer />
   </div>
